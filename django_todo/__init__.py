@@ -1,9 +1,5 @@
 import os
-from flask import Flask
 
-if os.path.exists("env.py"):
-    import env  # noqa
-
-
-app = Flask(__name__)
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
+if os.path.isfile('env.py'):
+    import env
+SECRET_KEY = os.environ.get('SECRET_KEY')
