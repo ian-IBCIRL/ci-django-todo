@@ -103,6 +103,19 @@ rm .vscode/uptime.sh
 
 Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
+Note env py needed. e.g.
+import os
+os.environ.setdefault("S_K","74fxaa8t2lfyvdk-e7ok9_2+coc$1$p)g")
+
+and settings py is:
+import os
+if os.path.isfile('env.py'):
+    import env
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ.get('SECRET_KEY')
+
+
 ---
 
 Happy coding!
