@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
 # Create your views here.
+def say_hi(request):
+        return HttpResponse("hello world !")
+
+
+def say_hitop(request):
+        return HttpResponse("hello world from the top !")
+
+
+
