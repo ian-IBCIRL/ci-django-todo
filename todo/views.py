@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from .models import Item
 
 
 # Create your views here.
@@ -15,7 +16,11 @@ def say_hi(request):
 
 
 def get_todo_list(request):
-    return render(request, 'todo/todo_list.html')
+    items = Item.objects.all()
+    context = {
+        'items': items
+    }
+    return render(request, 'todo/todo_list.html', context)
 
 
 def say_todo(request):
