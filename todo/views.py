@@ -14,4 +14,9 @@ def say_hi(request):
     return HttpResponse("hello world !")
 
 
+def get_todo_list(request):
+    return render(request, 'todo/todo_list.html')
 
+
+def say_todo(request):
+    return render(request, 'todo/todo.html')
