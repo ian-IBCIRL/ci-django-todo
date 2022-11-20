@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from .models import Item
 
 
@@ -24,6 +24,13 @@ def get_todo_list(request):
 
 
 def add_item(request):
+    if request.method == 'POST':
+        name = request.POST.get('item_name')
+        done = 'done' in request.POST
+        Item.objects.create(name=name, done=done)
+
+        return redirect('get_todo_list')
+
     return render(request, 'todo/add_item.html')
 
 

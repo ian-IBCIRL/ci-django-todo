@@ -2,9 +2,9 @@
 
 Welcome,
 
-This is the readme for
+This is the readme for my first Django project.
 
-The last update to this file was: **November 18, 2022**
+The last update to this file was: **November 20, 2022**
 
 ## Gitpod Reminders
 
