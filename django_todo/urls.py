@@ -15,17 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from todo.views import say_hi, say_hi2, say_hitop
-from todo.views import get_todo_list, say_todo, add_item, edit_item
+from todo import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hi/', say_hi, name='hi'),
-    path('hello/', say_hi, name='hello'),
-    path('hitop', say_hitop, name='hitop'),
-    path('hi2', say_hi2, name='hi2'),
-    path('', get_todo_list, name='get_todo_list'),
-    path('todo', say_todo, name='say_todo'),
-    path('add', add_item, name='add'),
-    path('edit/<item_id>', edit_item, name='edit'),
+    path('hi/', views.say_hi, name='hi'),
+    path('hello/', views.say_hi, name='hello'),
+    path('hitop', views.say_hitop, name='hitop'),
+    path('hi2', views.say_hi2, name='hi2'),
+    path('', views.get_todo_list, name='get_todo_list'),
+    path('todo', views.say_todo, name='say_todo'),
+    path('add', views.add_item, name='add'),
+    path('edit/<item_id>', views.edit_item, name='edit'),
+    path('toggle/<item_id>', views.toggle_item, name='toggle'),
 ]
