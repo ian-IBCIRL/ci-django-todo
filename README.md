@@ -4,11 +4,13 @@ Welcome,
 
 This is the readme for my first Django project.
 
-The last update to this file was: **November 20, 2022**
+The last update to this file was: **Dec 21, 2022**
 
 ## Gitpod Reminders
 
 To install django, `pip3 install 'django<4'`
+
+Use `python3 manage.py runserver` to launch web server
 
 ------
 
@@ -19,7 +21,7 @@ Here is the version history:
 
 **November 18 2022:** Initial release.
 
-**September 1 2023:** Remove `example` environment variable.
+**Dec 21 2022:** Readme cleanup.
 
 ------
 
